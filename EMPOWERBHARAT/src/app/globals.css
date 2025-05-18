@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 5% 96%; /* Light Gray */
+    --foreground: 240 10% 3.9%; /* Dark Gray */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 205 70% 45%; /* Polished Blue */
+    --primary-foreground: 0 0% 98%; /* White */
+    --secondary: 240 5% 90%; /* Lighter Gray */
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 240 5% 94%; /* Slightly darker gray than secondary */
+    --muted-foreground: 240 5% 65%; /* Gray */
+    --accent: 205 70% 45%; /* Polished Blue */
+    --accent-foreground: 0 0% 98%; /* White */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 85%; /* Gray border */
+    --input: 240 5% 85%; /* Gray input border */
+    --ring: 205 70% 45%; /* Polished Blue */
+    --chart-1: 205 70% 45%; /* Polished Blue */
+    --chart-2: 29 65% 51%; /* Burnt Orange */
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors */
+    --sidebar-background: 0 0% 100%; /* White for sidebar bg */
+    --sidebar-foreground: 240 10% 3.9%; /* Dark Gray for text */
+    --sidebar-primary: 205 70% 45%; /* Polished Blue */
+    --sidebar-primary-foreground: 0 0% 98%; /* White */
+    --sidebar-accent: 240 5% 96%; /* Light Gray for hover/active (matches new background) */
+    --sidebar-accent-foreground: 240 10% 3.9%; /* Dark Gray for text on hover */
+    --sidebar-border: 240 5% 90%; /* Light Gray border */
+    --sidebar-ring: 205 70% 45%; /* Polished Blue for focus rings */
+  }
+
+  .dark {
+    /* Dark theme adjustments for consistency */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 205 70% 45%; /* Polished Blue */
+    --primary-foreground: 0 0% 98%; /* White */
+    --secondary: 240 5% 11%; /* Darker Gray */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5% 15%; /* Slightly lighter dark gray */
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 205 70% 45%; /* Polished Blue */
+    --accent-foreground: 0 0% 98%; /* White */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 15%; /* Dark gray border */
+    --input: 240 5% 15%; /* Dark gray input border */
+    --ring: 205 70% 45%; /* Polished Blue */
+    --chart-1: 205 70% 45%; /* Polished Blue */
+    --chart-2: 29 65% 51%; /* Burnt Orange */
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    /* Sidebar specific colors */
+    --sidebar-background: 240 10% 3.9%; /* Dark for sidebar bg */
+    --sidebar-foreground: 0 0% 98%; /* White for text */
+    --sidebar-primary: 205 70% 45%; /* Polished Blue */
+    --sidebar-primary-foreground: 0 0% 98%; /* White */
+    --sidebar-accent: 240 5% 11%; /* Darker gray hover */
+    --sidebar-accent-foreground: 0 0% 98%; /* White for text on hover */
+    --sidebar-border: 240 5% 15%; /* Dark gray border */
+    --sidebar-ring: 205 70% 45%; /* Polished Blue for focus rings */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
